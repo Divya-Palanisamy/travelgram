@@ -1,0 +1,14 @@
+<div class="card mb-3 mt-4 p-2 horizontal-display w-75 container" (click)="navigateToProfile()">
+    <div class="d-flex flex-direction-row">
+      <img [src]="user.photo" width="80" height="80" class="rounded-circle ml-2" />
+      <div>
+        <h6 class="px-3 mt-1 card-title">{{ user.name | uppercase }}</h6>
+         
+        <p class="px-3 card-text">{{ user.bio | titlecase}}</p>
+      </div>
+      
+    </div>
+</div>
+    
+      
+ 

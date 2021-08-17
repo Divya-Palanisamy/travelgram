@@ -1,0 +1,31 @@
+<div class="card mb-3 border-secondary">
+    <a [href]="post.picture" target="_blank">
+        <img [src]="post.picture" height="350" width="100%">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title text-primary  ">
+        <fa-icon [icon]="map" size="lg"></fa-icon>
+        {{ post.location | uppercase }}
+      </h5>
+      <p class="card-text">{{ post.caption | titlecase }}</p>
+      <p class="card-text">
+        <small class="text-muted">by: {{ post.by }}</small>
+      </p>
+    </div>
+    <div
+      class="card-footer bg-transparent border-secondary d-flex justify-content-around align-items-center">
+      <div (click)="likePost()" class="text-primary">
+        <fa-icon [icon]="thumbsUp" size="lg" primaryColor="blue"></fa-icon>
+        {{ like }}
+      </div>
+      <div (click)="dislikePost()" class="text-primary">
+        <fa-icon [icon]="thumbsDown" size="lg" primaryColor="blue"></fa-icon>
+        {{ dislike }}
+      </div>
+      <a [href]="instaUrl()" target="_blank" class="text-secondary">
+        <fa-icon [icon]="share" size="lg" primaryColor="blue"></fa-icon>
+      </a>
+     
+    </div>
+  </div>
+  

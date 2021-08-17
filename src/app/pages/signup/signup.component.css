@@ -1,0 +1,12 @@
+.vh {
+  min-height: 71vh;
+}
+
+.card {
+  width: 50%;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "travelgram-f7eb0": {
+      "hosting": {
+        "travelgram": [
+          "travelgram-f7eb0"
+        ]
+      }
+    }
+  }
+}

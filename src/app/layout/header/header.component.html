@@ -1,0 +1,24 @@
+<nav class="navbar bg-violet">
+    <div class="container-fluid">
+        <div >
+            <h1 class="navbar-brand  text-dark"><img src="./../../../assets/undraw_Around_the_world_re_n353.svg" width="70" height="70"> TravelGram</h1>
+        </div>
+        <ul class="nav navbar-right ">
+            <div *ngIf="email" class="p-2 text-dark navbar-text float-left">
+               <h4> {{ username }}</h4>
+            </div>
+            <a *ngIf="email" class="fs-5 text-dark nav-item nav-link m-1" [routerLink]="['/']"
+            routerLinkActive="active">Home</a>
+
+            <a *ngIf="!email" [routerLink]="['/signin']" class="fs-5 m-1 text-dark nav-item nav-link"
+            routerLinkActive="active">SignIn</a>
+
+            <a *ngIf="!email" [routerLink]="['/signup']" class="fs-5 m-1 text-dark nav-item nav-link"
+            routerLinkActive="active">SignUp</a>
+
+            <a *ngIf="email" (click)="logOut()" class="fs-5 m-1 text-dark nav-item nav-link">LogOut</a>
+
+            <a *ngIf="email" [routerLink]="['/addpost']" class="fs-5 m-1 text-warning nav-item nav-link btn-primary">Add Post</a>
+        </ul>
+    </div>
+ </nav>

@@ -1,0 +1,22 @@
+<div class="container row vh  ">
+        <div class="col col-md-6 mt-5 mb-2">
+            <a [href]="instaUrl()" target="_blank" class="text-secondary">
+                <img [src]="user.photo"  width="500" height="500" class="rounded-circle p-1 bg-info">
+            </a>
+            
+        </div>
+        <div class="col col-md-6 d-flex align-items-center justify-content-center mt-n5">
+            <div class="card" >
+                <div class="card-title text-primary">
+                    <h1 class="px-3 pt-2">{{user.username}}</h1>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-text"><fa-icon [icon]="name"></fa-icon> {{user.name | titlecase}}</h3>
+                    <p class="card-text"><fa-icon [icon]="mail"></fa-icon> Email: {{user.email}}</p>
+                    <p class="card-text"><fa-icon [icon]="bio"></fa-icon> Bio: {{user.bio | titlecase}}</p>
+                    <p class="card-text"><fa-icon [icon]="country"></fa-icon> Country: {{user.country | titlecase}}</p>      
+                </div>
+            </div>
+        </div>      
+</div>
+ 

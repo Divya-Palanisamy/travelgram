@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-user',
@@ -12,14 +13,14 @@ export class UserComponent implements OnInit {
   user;
   constructor(
     private router: Router,
+    private auth: AuthService,
   ) { }
 
   ngOnInit(): void {
   }
 
   navigateToProfile(){
-    this.router.navigateByUrl('/profile').then(() => {
-      window.location.reload();
-    });
+    this.router.navigateByUrl('/profile');
+    this.auth.passUser(this.user);
   }
 }

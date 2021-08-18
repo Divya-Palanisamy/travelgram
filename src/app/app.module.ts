@@ -14,6 +14,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AddpostComponent } from './pages/addpost/addpost.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -29,7 +31,6 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     HomeComponent,
     ErrorComponent,
     AddpostComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

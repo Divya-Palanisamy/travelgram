@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  
+  userid = null;
+
   constructor(
     private fire: AngularFireAuth,
     ) { 
     }
 
+
+  passUser(user){
+    this.userid = user.id;
+  }
+
+  getUserId(){
+    return this.userid;
+  }
   signUp(email: string, password: string){
     return this.fire.createUserWithEmailAndPassword(email, password);
   }

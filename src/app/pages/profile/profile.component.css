@@ -5,10 +5,34 @@
 img:hover {
   opacity: 0.8;
 }
+.display-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.post {
+  display: inline-block;
+  width: 360px;
+  height: auto;
+  border-radius: 10px;
+  border: orchid 2px solid;
+  margin: 1rem;
+}
+.post img {
+  width: 355px;
+  border-radius: 10px;
+}
 @media screen and (min-width: 360px) and (max-width: 600px) {
   img {
     width: 250px;
     height: 250px;
     margin: 0 30px;
+  }
+  .post img {
+    width: 220px;
+  }
+  .post {
+    width: 300px;
   }
 }

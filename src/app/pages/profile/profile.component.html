@@ -1,7 +1,7 @@
 <div class="container row vh  ">
         <div class="col col-md-6 mt-5 mb-2">
             <a [href]="instaUrl()" target="_blank" class="text-secondary">
-                <img [src]="user.photo"  width="500" height="500" class="rounded-circle p-1 bg-info">
+                <img [src]="user.photo"  width="500" height="500" class="rounded-circle p-1 bg-info"/>
             </a>
             
         </div>
@@ -19,4 +19,30 @@
             </div>
         </div>      
 </div>
+<hr>
+<div class="container display-flex mb-3">
+    <div *ngFor="let post of posts">
+        <div class="post text-center" >
+            <div class="image mb-1">
+                <a [href]="post.picture" target="_blank">
+                    <img [src]="post.picture" height="250" width="250">
+                </a>
+            </div>
+           
+            <div class="mt-2">
+              <h6 class="text-primary p-1">
+                <fa-icon [icon]="map" size="lg"></fa-icon>
+                {{ post.location | uppercase }}
+              </h6>
+              <p class="p-1">{{ post.caption | titlecase }}</p>
+            </div>
+        </div>
+       
+    </div>
+</div> 
+    
+    
+
+  
+
  

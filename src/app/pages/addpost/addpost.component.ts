@@ -52,6 +52,7 @@ export class AddpostComponent implements OnInit {
   onSubmit(){
     const uid = v4();
 
+
     this.db.object(`/posts/${uid}`)
     .set({
       id: uid,
@@ -60,7 +61,8 @@ export class AddpostComponent implements OnInit {
       picture: this.picture,
       by: this.user.name,
       instaId: this.user.username,
-      date: Date.now()
+      date: Date.now(),
+      userid: this.user.id,
     })
     .then(() => {
       this.toastr.success("Uploaded");
@@ -70,6 +72,7 @@ export class AddpostComponent implements OnInit {
       this.toastr.error("Upload Failed");
     })
   }
+
   async uploadFile(event) {
     const file = event.target.files[0];
 
